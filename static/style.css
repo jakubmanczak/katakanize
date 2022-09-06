@@ -16,6 +16,7 @@ h1 {
 	transition-duration: 100ms;
 	padding: 1rem;
 	display: inline-block;
+	text-rendering: geometricPrecision;
 }
 h1:hover {
 	transform: rotate(-4deg);
