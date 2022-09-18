@@ -17,9 +17,7 @@ const config = {
 		paths: {
 			// change below to your repo name
 			base: dev ? '' : '/katakanize'
-		},
-		// hydrate the <div id="svelte"> element in src/app.html
-		target: '#svelte'
+		}
 	}
 };
 
