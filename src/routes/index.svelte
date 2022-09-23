@@ -25,7 +25,9 @@
 		Object.keys(config.chartable).forEach((e) => {
 			let el = e as keyof typeof config.chartable;
 			content = content.toLocaleLowerCase();
-			content = content.replaceAll(config.chartable[el], el);
+			config.chartable[el].forEach((elf) => {
+				content = content.replaceAll(elf, el);
+			});
 		});
 		return content;
 	}
