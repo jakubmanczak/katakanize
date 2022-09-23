@@ -82,6 +82,7 @@ span {
 }
 span:first-of-type {
 	padding: 0.5rem 1.5rem;
+	text-align: left;
 }
 span[contenteditable]:empty::before {
 	content: 'Enter your text here...';

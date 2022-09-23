@@ -1,24 +1,33 @@
 <script lang="ts">
+	import { config } from '../config';
+
 	let h1: HTMLHeadingElement;
+	let input: HTMLSpanElement;
+	let output: HTMLSpanElement;
+	let copyinput: HTMLInputElement;
 	function swapRotDirection() {
 		h1?.classList.toggle('moused');
 	}
 
-	let input: HTMLSpanElement;
-	let output: HTMLSpanElement;
-	let transliteration: string;
-	function handleInput(this: HTMLTextAreaElement) {
-		transliteration = input.textContent ? input.textContent : '';
+	function handleInput() {
+		let transliteration: string = input.textContent ? input.textContent : '';
+		transliteration = handleTransliteration(transliteration);
 		output.textContent = transliteration;
 		copyinput.value = transliteration;
 	}
-
-	let copyinput: HTMLInputElement;
 	function handleCopying() {
 		copyinput.select();
 		copyinput.setSelectionRange(0, 99999);
 		navigator.clipboard.writeText(copyinput.value);
 		alert('copied "' + copyinput.value + '"');
+	}
+	function handleTransliteration(content: string) {
+		Object.keys(config.chartable).forEach((e) => {
+			let el = e as keyof typeof config.chartable;
+			content = content.toLocaleLowerCase();
+			content = content.replaceAll(config.chartable[el], el);
+		});
+		return content;
 	}
 </script>
 
