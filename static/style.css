@@ -46,20 +46,6 @@ main {
 	gap: 1.5rem;
 	padding: 2rem;
 }
-main > textarea {
-	background-color: var(--raised);
-	color: var(--contrast);
-	text-align: center;
-	outline: none;
-	border-radius: 8px;
-	min-width: 17rem;
-	width: 100%;
-	max-width: 40rem;
-	min-height: 3rem;
-	max-height: 15rem;
-	resize: none;
-	overflow: hidden;
-}
 span {
 	background-color: var(--raised);
 	text-align: center;
@@ -90,7 +76,6 @@ button {
 	padding: 0.3rem 0.7rem;
 	font-family: 'Noto Sans', sans-serif;
 	background-color: var(--raised);
-	border: none;
 	color: var(--contrast);
 	border: 1px solid var(--muted);
 	border-radius: 6px;
@@ -100,4 +85,10 @@ button {
 }
 button:hover {
 	outline: 1px solid var(--muted);
+}
+.mutedtext {
+	color: var(--muted);
+}
+a {
+	color: inherit;
 }
