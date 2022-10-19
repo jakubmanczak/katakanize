@@ -18,7 +18,7 @@ export const config = {
 		ヲ: ['wo', 'w'],
 		ワ: ['wa', 'v'],
 		ワイ: ['wai', 'y'],
-		ロ: ['ro', 'lo'],
+		ロ: ['ro', 'lo', 'llo', 'rro'],
 		レ: ['re', 'le'],
 		ル: ['ru', 'lu', 'r', 'l'],
 		リ: ['ri', 'li'],
