@@ -101,15 +101,3 @@ button {
 button:hover {
 	outline: 1px solid var(--muted);
 }
-footer {
-	text-align: center;
-}
-footer a {
-	color: inherit;
-}
-.mutedtext {
-	color: var(--muted);
-}
-a {
-	color: inherit;
-}
