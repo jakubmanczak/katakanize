@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { config } from '../config';
+	import { handleTransliteration } from '../master';
 
 	let h1: HTMLHeadingElement;
 	let input: HTMLSpanElement;
@@ -20,16 +20,6 @@
 		copyinput.setSelectionRange(0, 99999);
 		navigator.clipboard.writeText(copyinput.value);
 		alert('copied "' + copyinput.value + '"');
-	}
-	function handleTransliteration(content: string) {
-		Object.keys(config.chartable).forEach((e) => {
-			let el = e as keyof typeof config.chartable;
-			content = content.toLocaleLowerCase();
-			config.chartable[el].forEach((elf) => {
-				content = content.replaceAll(elf, el);
-			});
-		});
-		return content;
 	}
 </script>
 

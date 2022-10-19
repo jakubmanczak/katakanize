@@ -27,7 +27,6 @@ h1.moused:hover {
 body {
 	display: flex;
 	flex-direction: column;
-	/* min-height: 100vh; */
 }
 header {
 	text-align: center;
@@ -45,18 +44,14 @@ main {
 	flex-direction: column;
 	align-items: center;
 	gap: 1.5rem;
-	/* margin: 2rem; */
 	padding: 2rem;
 }
 main > textarea {
 	background-color: var(--raised);
 	color: var(--contrast);
 	text-align: center;
-	/* resize: none; */
 	outline: none;
-	/* border: none; */
 	border-radius: 8px;
-	/* padding: 0.35rem 0.75rem; */
 	min-width: 17rem;
 	width: 100%;
 	max-width: 40rem;
@@ -67,7 +62,6 @@ main > textarea {
 }
 span {
 	background-color: var(--raised);
-	/* color: var(--muted); */
 	text-align: center;
 	outline: none;
 	border: 1px solid var(--muted);
@@ -103,14 +97,11 @@ button {
 	text-rendering: geometricPrecision;
 	font-size: 1em;
 	cursor: pointer;
-	/* transition-duration: 100ms; */
 }
 button:hover {
-	/* transform: scale(1.05); */
 	outline: 1px solid var(--muted);
 }
 footer {
-	color: var(--muted);
 	text-align: center;
 }
 footer a {
