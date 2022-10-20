@@ -1,10 +1,14 @@
 import { config } from './config';
 
+export const chartableSets = ['Universal'];
+export const chartableSelection = 0;
+
 export function handleTransliteration(content: string) {
-	Object.keys(config.chartable).forEach((e) => {
-		let el = e as keyof typeof config.chartable;
+	let chartable = config.chartables[chartableSelection];
+	Object.keys(chartable).forEach((e) => {
+		let el = e as keyof typeof chartable;
 		content = content.toLocaleLowerCase();
-		config.chartable[el].forEach((elf) => {
+		chartable[el].forEach((elf) => {
 			content = content.replaceAll(elf, el);
 		});
 	});

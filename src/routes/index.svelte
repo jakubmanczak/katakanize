@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { handleTransliteration } from '../master';
+	import { handleTransliteration, chartableSets, chartableSelection } from '../master';
 
 	let h1: HTMLHeadingElement;
 	let input: HTMLSpanElement;
